@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello Phone Sync!</string>
+    <string name="app_name">Phone Sync</string>
+    <string name="main_no_items">No PhoneSync List to display</string>
+    <string name="menu_settings">Settings</string>
+</resources>
