@@ -37,7 +37,7 @@ public class ChangeDetailsActivity extends Activity {
 
 	          @Override
 	          public void onClick(View view) {
-	            Intent intent = new Intent(/*FirstActivity.this*/ view.getContext(), PhoneSyncMainActivity.class);
+	            Intent intent = new Intent(view.getContext(), PhoneSyncMainActivity.class);
 	            startActivity(intent);
 	          }
 
