@@ -7,12 +7,14 @@ import android.app.Activity;
 import android.app.ListActivity;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class PhoneSyncMainActivity extends ListActivity {
@@ -33,6 +35,18 @@ public class PhoneSyncMainActivity extends ListActivity {
 	    public void onCreate(Bundle savedInstanceState) {
 	        super.onCreate(savedInstanceState);
 	        setContentView(R.layout.activity_phone_sync_main);
+	        Button btn = (Button) findViewById(R.id.button1);
+	        //Button orderButton = (Button)findViewById(R.id.order);
+
+	        btn.setOnClickListener(new View.OnClickListener() {
+
+	          @Override
+	          public void onClick(View view) {
+	            Intent intent = new Intent(/*FirstActivity.this*/ view.getContext(), ChangeDetailsActivity.class);
+	            startActivity(intent);
+	          }
+
+	        });
 	        m_orders = new ArrayList<PhoneBookEntry>();
 	        this.m_adapter = new PhoneSyncListAdapter(this, R.layout.row, m_orders);
 	        setListAdapter(this.m_adapter);
